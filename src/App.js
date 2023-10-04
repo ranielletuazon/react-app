@@ -1,44 +1,52 @@
+import React, { useState } from 'react';
 import './App.css';
 
-function CalcButton({label})
-{
-  return(
-    <button>
-      {label}
-    </button>
-  );
-}
-
-function CalcDisplay({display})
-{
-  return(
-    <div className="CalcDisplay">
-      {display}
-    </div>
-  )
-}
-
 function App() {
+  const [value, setValue] = useState('');
+
   return (
-    <div className="CalcContainer">
-      <CalcDisplay display={"Hello World"}/>
-      <div className="ButtonContainer">
-        <CalcButton label={7}/>
-        <CalcButton label={8}/>
-        <CalcButton label={9}/>
-        <CalcButton label={"+"}/>
-        <CalcButton label={4}/>
-        <CalcButton label={5}/>
-        <CalcButton label={6}/>
-        <CalcButton label={"-"}/>
-        <CalcButton label={1}/>
-        <CalcButton label={2}/>
-        <CalcButton label={3}/>
-        <CalcButton label={"*"}/>
-        <CalcButton label={"C"}/>
-        <CalcButton label={0}/>
-        <CalcButton label={"="}/>
-        <CalcButton label={"/"}/>
+    <div>
+      <h1 className='head'>Ranielle Adriane D. Tuazon</h1>
+      <div className="container">
+        <div className="calculator">
+          <form action="">
+            <div className="display">
+              <input type="text" value={value} />
+            </div>
+            <div>
+              <input type="button" value="C" onClick={e => setValue('')} />
+              <input type="button" value="DE" onClick={e => setValue(value.slice(0, -1))} />
+              <input type="button" value="." onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="/" onClick={e => setValue(value + e.target.value)} />
+            </div>
+            <div>
+              <input type="button" value="7" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="8" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="9" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="*" onClick={e => setValue(value + e.target.value)} />
+            </div>
+            <div>
+              <input type="button" value="4" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="5" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="6" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="+" onClick={e => setValue(value + e.target.value)} />
+            </div>
+            <div>
+              <input type="button" value="1" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="2" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="3" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="-" onClick={e => setValue(value + e.target.value)} />
+            </div>
+            <div>
+              <input type="button" value="00" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="0" onClick={e => setValue(value + e.target.value)} />
+              <input type="button" value="=" className="equal" onClick={e => setValue(eval(value))} />
+            </div>
+          </form>
+        </div>
+        <div className='tuazon-button'>
+          <input type='button' value={"Tuazon"} onClick={e => setValue('Rain Tuazon')}/>
+        </div>
       </div>
     </div>
   );

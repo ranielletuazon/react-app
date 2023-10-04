@@ -1,6 +1,80 @@
-.App
+.container 
+{
+  width: 100%;
+  height: 86vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(140deg, rgb(231, 231, 231), rgb(165, 165, 165));
+}
+
+.head
 {
   text-align: center;
-  justify-content: center;
-  
+}
+
+.calculator
+{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.tuazon-button {
+  text-align: center; 
+}
+
+.tuazon-button input[type='button'] {
+  background-color: rgb(105, 169, 224); 
+  color: white; 
+  border: 10px solid white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.tuazon-button input[type='button']:hover {
+  background-color: rgb(7, 93, 133); 
+}
+
+
+form input
+{
+  border: none;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  background-color: rgb(105, 169, 224);
+  margin: 2px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bolder;
+}
+
+form input[type="button"]:hover
+{
+  background-color: rgb(7, 93, 133)
+}
+
+form .display
+{
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0px 15px 0px;
+}
+
+form .display input
+{
+  text-align: right;
+  flex: 1;
+  font-size: 40px;
+  padding: 5px 10px;
+  background-color: rgb(64, 64, 64);
+}
+
+form input.equal
+{
+  width: 123px;
 }
