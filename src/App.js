@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <h1 className='head'>Ranielle Adriane D. Tuazon</h1>
+      <h1 className='head'>Ranielle Adriane D. Tuazon IT-3A</h1>
       <div className="container">
         <div className="calculator">
           <form action="">
